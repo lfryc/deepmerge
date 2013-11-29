@@ -1,3 +1,11 @@
+if (typeof exports === 'object' && typeof define !== 'function') {
+  define = function (factory) {
+    factory(require, exports, module);
+  };
+}
+
+define(function (require, exports, module) {
+
 module.exports = function merge (target, src) {
     var array = Array.isArray(src)
     var dst = array && [] || {}
@@ -36,3 +44,6 @@ module.exports = function merge (target, src) {
 
     return dst
 }
+
+
+});
